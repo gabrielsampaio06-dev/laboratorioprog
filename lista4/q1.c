@@ -1,22 +1,50 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 int main(){
     int vet[10];
-    int *p = NULL;
-    printf("digite um numero para o vetor: \n");
-    for(int i=0;i<10;i++){
-    scanf("%d" ,&vet[i]);
+    int *p = vet;
+    srand (time(NULL));
+    int temPar = 0;
+    for(int i =0;i<10;i++){
+       *(p+i)=rand()%100; 
+       printf("%d\n" ,vet[i]);
     }
     for(int i=0;i<10;i++){
-        if(vet[i]%2==0){
-            p = &vet[i];
-            break;
+        
+        if(*(p+i)%2==0){
+            printf("o elemento par é [%p]%d\n",p+i,*(p+i));
+            temPar = 1;
         }
+        if(!temPar){
+            printf("nenhum elemento presente\n");
+        }
+    }
+    
+    
+    return 0;
+}
 
-    }
-    if(p != NULL){
-        printf("numero encontrado é [%p] %d/n" ,p , *p);
-    }
+
+
+    
+    
+    
+    
+    
+        
+      
+    
+   
+       
+        
+          
+           
+        
+        
+            
+        
+    
     
     
     return 0;
