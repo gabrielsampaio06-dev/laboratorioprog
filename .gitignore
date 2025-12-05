@@ -1,0 +1,12 @@
+# Ignorar arquivos do macOS
+.DS_Store
+
+# Ignorar a pasta do VS Code
+.vscode/
+
+# Ignorar programas compilados
+*.out
+*.exe
+
+# Ignorar arquivos objeto
+*.o
