@@ -5,7 +5,7 @@ int main(){
     int i;
     int j;
     printf("defina as dimensoes: ");
-    scanf("%d %d " ,&i ,&j);
+    scanf("%d %d" ,&i ,&j);
     int mat[i][j];
     srand(time(NULL));
     for(int k=0;k<i;k++){
@@ -21,10 +21,10 @@ int main(){
         soma += mat[k][k];
         printf("soma é %d\n " ,soma);
         if(soma%2==0){
-            printf("soma da diagonal é par\n");
+            printf("soma da diagonal é par\n ");
         }
         else{
-            printf("soma da diagonal nao é par");
+            printf("soma da diagonal nao é par\n ");
         }
     }
 

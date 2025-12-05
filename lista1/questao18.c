@@ -3,7 +3,7 @@
 int main() {
     int i, j;
 
-    // ======== RETÂNGULO ========
+    
     printf("RETANGULO:\n");
     int altura = 8, largura = 9;
     for (i = 0; i < altura; i++) {
@@ -16,12 +16,12 @@ int main() {
         printf("\n");
     }
 
-    // ======== ELIPSE ========
+    
     printf("\nELIPSE:\n");
     int linhas = 9, colunas = 11;
     for (i = 0; i < linhas; i++) {
         for (j = 0; j < colunas; j++) {
-            // fórmula aproximada para contorno da elipse
+            
             if ((i == 0 && (j > 2 && j < 8)) ||
                 (i == 1 && (j == 1 || j == 9)) ||
                 (i == 2 && (j == 0 || j == 10)) ||
@@ -35,7 +35,7 @@ int main() {
         printf("\n");
     }
 
-    // ======== SETA ========
+    
     printf("\nSETA:\n");
     int alturaSeta = 7;
     for (i = 0; i < alturaSeta; i++) {
@@ -54,10 +54,10 @@ int main() {
         printf("\n");
     }
 
-    // ======== LOSANGO ========
+    
     printf("\nLOSANGO:\n");
-    int n = 4; // altura do topo
-    for (i = 1; i <= n; i++) { // parte superior
+    int n = 4; 
+    for (i = 1; i <= n; i++) { 
         for (j = i; j < n; j++)
             printf(" ");
         for (j = 1; j <= (2 * i - 1); j++) {
@@ -68,7 +68,7 @@ int main() {
         }
         printf("\n");
     }
-    for (i = n - 1; i >= 1; i--) { // parte inferior
+    for (i = n - 1; i >= 1; i--) { 
         for (j = n; j > i; j--)
             printf(" ");
         for (j = 1; j <= (2 * i - 1); j++) {

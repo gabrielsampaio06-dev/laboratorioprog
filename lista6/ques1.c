@@ -16,6 +16,7 @@ int vet1[tam] ,vet2[tam];
 int *p1 ,*p2 = NULL;
 p1 = vet1 ;
 p2=vet2;
+//inicio da criaçao dos vetores
 srand(time(NULL));
 for(int i =0;i<tam;i++){           // vetor 1
     *(p1+i) = rand()%n;          //
@@ -37,7 +38,7 @@ if(!m){
     printf("memoria indisponivel\n");
     exit(2);
 }
-//*linha(vai armazenar os valores da coluna)
+//vetor de ponteiros *linha (vai armazenar os valores inteiros da coluna)
 for(int i=0;i<tam;i++){
     *(m+i) = (int *)malloc(tam*sizeof(int));
     if(!(*(m+i))){
@@ -45,7 +46,7 @@ for(int i=0;i<tam;i++){
         exit(3);
     }
 }
-//matriz coorelaçao criada,ate agora ela e zero pois nada foi comparado
+//matriz coorelaçao criada,ate agora ela é zero pois nada foi comparado
 for(int i =0;i<tam;i++){
     for(int j=0;j<tam;j++){
         
@@ -54,9 +55,9 @@ for(int i =0;i<tam;i++){
     }
     printf("\n");
 }
-//comparaçoes feitas,falta imprimir
+//comparaçoes 
 for(int i =0;i<tam;i++){
-    *(*(m+*(p1+i))+*(p2+i)) +=1;
+    *(*(m+*(p1+i))+*(p2+i)) +=1;//vai pegar a linha da matriz(vetor 1) e comparar com a coluna(vetor 2)
 
     
 }
@@ -67,6 +68,7 @@ for(int i=0;i<tam;i++){
     }
     printf("\n");
 }
+
 
 
     return 0;
